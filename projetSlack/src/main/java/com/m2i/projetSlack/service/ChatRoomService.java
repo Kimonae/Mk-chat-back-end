@@ -3,11 +3,14 @@ package com.m2i.projetSlack.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.m2i.projetSlack.entity.ChatRoom;
 import com.m2i.projetSlack.repository.ChatRoomRepository;
 
 
+
+@Service
 
 public class ChatRoomService {
 
