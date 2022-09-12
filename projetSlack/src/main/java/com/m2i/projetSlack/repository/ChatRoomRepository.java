@@ -9,10 +9,10 @@ import org.springframework.data.repository.query.Param;
 import com.m2i.projetSlack.entity.ChatRoom;
 
 
-
 public interface ChatRoomRepository extends JpaRepository<ChatRoom, Integer> {
 	
 	@Query("SELECT cr.name FROM ChatRoom cr WHERE cr.chatroom IN :rooms")
 	public List<ChatRoom> getRoomInListChatRoom(@Param("rooms") List<String> RoomName);
 
+	
 }

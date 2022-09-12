@@ -17,7 +17,7 @@ import com.m2i.projetSlack.service.ChatRoomService;
 
 
 @RestController
-@RequestMapping("/chatroom")
+@RequestMapping("/api/chatroom")
 
 public class ChatRoomController {
 	
