@@ -22,25 +22,28 @@ public class UsersController {
 	@Autowired
 	UsersService service;
 	
+	// Get user
 	@GetMapping()
 	List<Users> getUsers(){
 		return service.getUser();
 	}
 	
+	// Add user
 	@PostMapping()
 	public Users createUser(@RequestBody Users user) {
 		return service.postUser(user);
 	}
 	
+	// Modify user
 	@PutMapping()
 	public Users updateUser(@RequestBody Users user) {
 		return service.putUser(user);
 	}
 	
+	
+	// Delete user
 	@DeleteMapping("/{id}")
-	public void deleteUser(@PathVariable int id) {
-		if(service.getUser() != null) {
-			service.deleteUser(id);
-		}
+	public String deleteUser(@PathVariable int id) {
+			 return service.deleteUser(id);
 	}
 }
