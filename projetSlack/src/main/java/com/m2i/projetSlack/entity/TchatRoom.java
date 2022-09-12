@@ -8,27 +8,27 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="chatroom")
+@Table(name="tchatroom")
 
-public class ChatRoom {
+public class TchatRoom {
 	
 	@Id
 	@GeneratedValue
 	private int id;
 	private String name;
 	private Date CreationDate;
-	public ChatRoom(int id, String name, Date creationDate) {
+	public TchatRoom(int id, String name, Date creationDate) {
 		super();
 		this.id = id;
 		this.name = name;
 		CreationDate = creationDate;
 	}
-	public ChatRoom(String name, Date creationDate) {
+	public TchatRoom(String name, Date creationDate) {
 		super();
 		this.name = name;
 		CreationDate = creationDate;
 	}
-	public ChatRoom() {
+	public TchatRoom() {
 		super();
 	}
 	public int getId() {
