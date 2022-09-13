@@ -11,7 +11,8 @@ import com.m2i.projetSlack.entity.TchatRoom;
 
 public interface TchatRoomRepository extends JpaRepository<TchatRoom, Integer> {
 	
-	//@Query("SELECT t.name FROM TchatRoom t WHERE t.chatroom IN :rooms")
+	@Query("SELECT t.name FROM TchatRoom t WHERE t.tchatroom =:name")
+	
 	
 	//@Query("SELECT t.name FROM TchatRoom t")
 	//@Query("SELECT name FROM TchatRoom")
