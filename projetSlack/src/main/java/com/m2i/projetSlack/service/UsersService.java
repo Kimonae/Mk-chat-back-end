@@ -30,6 +30,7 @@ public class UsersService {
 		
 		newUsers.setLastname(user.getLastname());
 		newUsers.setFirstname(user.getFirstname());
+		newUsers.setPseudo(user.getPseudo());
 		
 		repo.save(newUsers);
 		
