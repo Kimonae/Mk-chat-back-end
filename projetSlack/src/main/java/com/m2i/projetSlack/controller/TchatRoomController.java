@@ -12,37 +12,37 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.m2i.projetSlack.entity.ChatRoom;
-import com.m2i.projetSlack.service.ChatRoomService;
+import com.m2i.projetSlack.entity.TchatRoom;
+import com.m2i.projetSlack.service.TchatRoomService;
 
 
 @RestController
-@RequestMapping("/ChatRoom")
+@RequestMapping("/api/tchatroom")
 
-public class ChatRoomController {
+public class TchatRoomController {
 	
 	
 	@Autowired
-	ChatRoomService service;
+	TchatRoomService service;
 	
 	@GetMapping()
-	public List<ChatRoom> getChatRoom(){
-		return service.getChatRoom();
+	public List<TchatRoom> getTchatRoom(){
+		return service.getTchatRoom();
 	}
 	
 	@PostMapping()
-	public ChatRoom postChatRoom(@RequestBody ChatRoom rooms){
-		return service.postChatRoom(rooms);
+	public TchatRoom postTchatRoom(@RequestBody TchatRoom rooms){
+		return service.postTchatRoom(rooms);
 	}
 	
 	@PutMapping()
-	public ChatRoom putChatRoom(@RequestBody ChatRoom rooms){
-		return service.putChatRoom(rooms);
+	public TchatRoom putTchatRoom(@RequestBody TchatRoom rooms){
+		return service.putTchatRoom(rooms);
 	}
 	
 	@DeleteMapping("/{id}")
-	public String deleteChatRoom(@PathVariable int id){
-		return service.deleteChatRoom(id);
+	public String deleteTchatRoom(@PathVariable int id){
+		return service.deleteTchatRoom(id);
 	}
 
 }
