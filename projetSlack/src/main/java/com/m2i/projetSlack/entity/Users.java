@@ -16,6 +16,7 @@ public class Users {
 	
 	private String lastname;
 	private String firstname;
+	private String pseudo;
 	
 	
 	public Users() {
@@ -23,18 +24,20 @@ public class Users {
 	}
 
 
-	public Users(String lastname, String firstname) {
+	public Users(String lastname, String firstname, String pseudo) {
 		super();
 		this.lastname = lastname;
 		this.firstname = firstname;
+		this.pseudo = pseudo;
 	}
 
 
-	public Users(int id, String lastname, String firstname) {
+	public Users(int id, String lastname, String firstname, String pseudo) {
 		super();
 		this.id = id;
 		this.lastname = lastname;
 		this.firstname = firstname;
+		this.pseudo = pseudo;
 	}
 
 
@@ -66,5 +69,17 @@ public class Users {
 	public void setFirstname(String firstname) {
 		this.firstname = firstname;
 	}
+
+
+	public String getPseudo() {
+		return pseudo;
+	}
+
+
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
+	}
+	
+	
 
 }
