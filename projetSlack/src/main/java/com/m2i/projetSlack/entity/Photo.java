@@ -3,7 +3,7 @@ package com.m2i.projetSlack.entity;
 
 @Entity
 @Table(name= "photos")
-public class Photos {
+public class Photo {
 	
 	@Id
 	@Generatedvalue(strategy= GeneratedType.IDENTITY)
@@ -11,12 +11,12 @@ public class Photos {
 	private String nom;
 	private String extension;
 	
-	public Photos() {
+	public Photo() {
 		super();
 		
 	}
 
-	public Photos(int id, String nom, String extension) {
+	public Photo(int id, String nom, String extension) {
 		super();
 		this.id = id;
 		this.nom = nom;
